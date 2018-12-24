@@ -1,0 +1,361 @@
+ .w {                  /*京东的版心是1190 */
+    width: 1190px;
+    margin: 0 auto;
+}
+body {
+    background-color: #f0f3ef;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+a { 
+    color: #a7a7a7;
+    font-size: 12px; 
+    text-decoration: none;
+}
+.f10 {
+    color: #f10215!important;
+}
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?823nsc');
+    src:  url('../fonts/icomoon.eot?823nsc#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?823nsc') format('truetype'),
+      url('../fonts/icomoon.woff?823nsc') format('woff'),
+      url('../fonts/icomoon.svg?823nsc#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+a:hover{
+    color: #e33333;
+}
+
+/* header部分 */
+header {
+    height: 80px;
+    background: #19140e; 
+}
+/* 快速导航栏部分开始 */
+.shortcut {
+    height: 30px;
+    line-height: 30px;
+    background: #e3e4e5;
+    border-bottom: 1px solid #ddd;
+    color: #a7a7a7;
+    font-size: 12px; 
+
+}
+.city {
+    margin-left: 206px;
+ }
+
+.gulid li {
+     float: left;
+}
+.space {          /*快速导航栏的小竖线的做法 */
+    width: 1px;
+    height: 10px;
+    margin: 10px 12px 0;
+    background-color: #a7a7a7;
+ }
+ .shortcut i { /* 引用字体图标 */
+    font-family: "icomoon";
+    color:#b0bed5;
+    font-style: normal;
+}
+.mobile {
+    position: relative;
+} 
+ .mobile img {
+    position: absolute;
+    top: 20px;
+    left: -2px;
+    border:1px solid #ccc;
+    padding: 3px;
+    width: 90%;
+
+}
+
+/* 快速导航栏部分结束 */
+/* 主体导航栏部分开始 */
+.middle {
+    height: 140px;
+    position: relative;
+}
+/* 主体导航栏部分结束 */
+.logo {
+    position: absolute;
+    top: -30px;
+    left: 0px;
+    box-shadow: 0px -10px 10px rgba(0,0,0,0.3)
+}
+.logo a{
+    display: block;
+    height: 190px;
+    width: 170px;
+    background: url(../images/loge_03.png) no-repeat;
+}   
+.form {
+    height: 35px;
+    width: 550px;
+    position: absolute;
+    top: 25px;
+    left: 320px;
+}
+.form input {/*表单部分 */
+    height: 35px;
+    width: 498px;
+    outline: none;
+    border: 1px solid #f10215;
+    float: left;
+    padding-left: 5px;
+    box-sizing: border-box;
+
+
+}
+.form button {
+    width:50px;
+    height: 35px;
+    background-color: #f10215;
+    float: left;
+}
+.form i{
+    line-height: 35px;
+    font-family: 'icomoon';
+    font-style: normal;
+    color: #fff;
+    font-size: 20px;
+}
+.car {
+    width:188px;
+    height: 33px;
+    background-color: #fff;
+    border: 1px solid #e3e4e5;
+    position: absolute;
+    top: 25px;
+    right: 95px;
+    line-height: 33px;
+    text-align: center;
+    color: #f10215;
+}
+
+.car i {
+    font-family: "icomoon";
+    font-style: normal;
+    font-size: 18px;
+    margin-right: 5px;
+}
+.car span {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    background-color: #f10215;
+    color:#fff;
+    top: 5px;
+    right:30px;
+    border-radius: 50%;
+    font-size:12px;
+}
+/* 关键词模块 */
+.hotwords {
+    position: absolute;
+    top: 68px;
+    left: 320px;
+}
+.hotwords a{
+    margin-right: 8px;
+}
+.navlist {
+    height: 40px;
+    width: 780px;
+    position: absolute;
+    left:170px;
+    bottom: 0;
+    line-height: 40px;
+}
+.navlist li  {
+    float: left;
+    margin-left: 30px;
+}
+.navlist li a {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333333;
+    } 
+.navlist li a:hover {
+    color: #f10215;
+}
+.navlist .space {
+margin: 15px -15px 0 15px;
+}
+/* 超级日 */
+.superday {
+    height: 50px;
+    width: 240px;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+footer {
+    height: 500px;
+    background-color:#f0f3ef;
+    margin-top: 35px;
+}
+
+/* 页脚部分开始 */
+.footer-top {
+    border-bottom: 1px solid #dedede;
+    padding:30px 0;
+    overflow: hidden;
+}
+.footer-top li {
+    width: 297px;
+    height:43px;
+    float: left;
+    position: relative;
+    line-height: 43px;
+}
+.footer-top li p {
+    font-weight: 700;
+    font-size: 16px;
+    color: #444;
+    margin-left: 80px;
+
+}
+
+.footer-top li h5 {
+    height: 42px;
+    width: 40px;
+    background: url(../images/sprite.footer.png) 0 -193px no-repeat;
+    position: absolute;
+    top: 0px;
+    left: 38px;
+    text-indent: -999em;
+}
+.footer-top li:nth-child(2) h5 {
+    background-position: -41px -192px;
+}
+.footer-top li:nth-child(3) h5 {
+    background-position: -80px -192px;
+}
+.footer-top li:nth-child(4) h5 {
+    background-position: -122px -192px;
+}
+/* 帮助菜单 */
+.help {
+    height: 200px;
+    border-bottom: 1px solid #ccc;
+    padding-top:25px;
+    color: #666;
+    box-sizing: border-box;
+}
+.help1 {
+    /* height:200px; */
+    width: 192px;
+}
+.help1 dt,
+.map h5 {
+    height: 30px;
+    line-height: 28px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #666;
+}
+
+.help1 dd {
+    height: 22px;
+    line-height:22px;
+}
+.help a {
+    color: #666;
+}
+/* 服务范围 */
+.map {
+    width: 200px;
+    height: 160px;
+    background: url(../images/sprite.footer.png) no-repeat 0 5px;
+}
+.map h5 {
+    text-align: center;
+}
+.map p {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 5px;
+    line-height: 18px;
+    padding-left: 18px;
+ }
+.map span {
+    font-family: "icomoon"
+}
+/* 友情链接部分 */
+.copyright {
+    height: 266px;
+    padding-top: 20px; 
+    text-align: center;
+    box-sizing: border-box;
+    color: #666;
+    font-size: 12px;
+} 
+.links a {
+    font-size: 12px;
+    color: #666;
+}
+.copyright span {
+    margin: 0 10px;
+} 
+/* 版权部分 */
+.copy {
+    color: #999;
+    margin-top: 20px;
+
+}
+.copy p {
+    line-height: 22px;
+}
+.web {
+    margin-top: 40px;
+}
+.web a{
+    display: inline-block;
+    width:100px;
+    height: 30px;
+    background: url(../images/sprite.footer.png) no-repeat -205px 0;
+    margin-right: 8px;
+}
+.web a:nth-child(2) {
+    background-position: -205px -35px;
+}
+.web a:nth-child(3) {
+    background-position: -205px -75px;
+}
+.web a:nth-child(4) {
+    background-position: -205px -110px;
+}
+.web a:nth-child(5) {
+    background-position: -205px -145px;
+}
+
+
+/* 页脚部分结束 */

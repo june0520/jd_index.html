@@ -1,0 +1,277 @@
+/* 中间分类模块 */
+.grid {
+    height: 480px;
+}
+/* 中间分类模块第一列 */
+.grid1 {
+    height: 470px;
+    width: 190px;
+    font-size: 12px;
+    color: #626262;
+    background-color: #fefefe;
+    padding-top: 10px;
+    position: relative;
+    /* overflow: hidden; */
+}
+.grid1 li {
+    padding-left: 12px;
+    line-height: 24px;
+    height: 24px;
+
+}
+.grid1 li:hover {
+    background-color:  #919191;
+}
+.grid1 a:hover {
+   color:  #f10215;
+}
+.grid1 a {
+    font-size: 14px;
+    color: #626262;
+    margin: 0 2px;
+}
+/* 最最左侧广告 */
+.adv {
+    width: 250px;
+    height: 470px;
+    position: absolute;
+    top: 10px;
+    left: -250px;
+    cursor: pointer;
+}
+.bigadv {
+    position: absolute;
+    top: 0px;
+    left: 250px;
+    z-index: 999;
+    /* 先指定高度，不然图片自动等比例缩放时。从左上角放大，不好看 */
+    height: 470px;
+    width: 0;
+    /* 给盒子添加背景图片实现过渡拉伸效果 ，或者直接插入图片让图片自身伸缩，实现不同的拉伸效果*/
+    background: url(../images/266758a7fdf336b5.jpg) no-repeat;
+    transition: all 0.5s;  
+}
+/* 鼠标经过adv这个盒子时，bigadv 图片的盒子的宽度会变宽由0变为790px */
+.adv:hover .bigadv {
+    width: 790px;
+}
+/* 中间分类模块第二列 */
+.grid2 {
+    width: 790px;
+    height: 100%;                  
+    margin-left: 10px;
+
+}
+.grid2 img {
+    display: block;
+    margin-top: 10px;
+}
+.grid2-r img {
+    height:150px;
+    width: 190px;
+}
+.grid2-l {
+    position: relative;
+}
+.arrow-l,
+.arrow-r {
+    width: 30px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, .2);
+    position: absolute;
+    text-align: center;
+    line-height: 60px;
+    transform: translateY(-50%);
+    top: 50%;
+}
+.arrow-l {
+    left: 0;
+}
+.arrow-r {
+    right: 0;
+}
+.arrow-l:hover,
+.arrow-r:hover{
+    background-color: rgba(0, 0, 0, .5);  
+}
+/* icon字体图标 */
+.grid2-l i {
+    font-family: "icomoon";
+    font-style: normal;
+    color: rgba(255, 255, 255, .8);
+    font-size: 16px;
+}
+.circle {
+    width: 180px;
+    height: 20px;
+    background-color:rgba(255, 255, 255, .6);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    /* overflow: hidden; */
+    border-radius: 8px;
+}
+.circle li {
+    float: left;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 4px 5px 0;
+    cursor: pointer;
+}
+.circle li:hover {
+    background-color: #f10215;
+}
+.circle .current {
+    background-color: #f10215;
+}
+/* 中间分类模块第三列 */
+.grid3 {
+    width: 190px;
+    height: 470px;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+.login {
+    height:90px;
+    width: 190px;
+    padding-top: 60px;
+    text-align: center;
+    position: relative;
+    background-color: #fff;
+
+}
+.pic {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: -10px;
+    left: 60px;
+    box-shadow: 3px 6px 25px #c3c3c3;
+    border-radius:50%;
+}
+.pic img {
+    width:90%;
+    border: 5px solid #e3e1df;
+    border-radius: 50%;
+}
+.login p {
+    color: #898997;
+    font-size:12px;
+    line-height: 24px;
+}
+.login a {
+    color: #666;
+    font-size:12px;
+}
+.login a:hover {
+    color: #f10215;
+}
+.fuli a{
+    display: inline-block;
+    width: 60px;
+    height: 22px;
+    line-height:22px;
+    background-color: #fff;
+    color: #f10215;
+    border-radius: 20px;
+    text-align: center;
+    margin: 13px 5px ;
+    box-shadow: 3px 6px 25px #c3c3c3;
+}
+.fuli a:last-child {
+    color: #e5d790;
+    background-color: #363634;
+}
+.fuli a:hover {
+    background-color: #f10215;
+    color: #fff;
+}
+.cuxiao {
+    height: 130px;
+    width: 160px;
+    background-color: #fff;
+    padding: 0 15px;
+    border-bottom: 1px solid #ccc;
+
+}
+/* .cuxiao-t {
+    overflow: hidden;
+} */
+
+.cuxiao-t p {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #1e1e1e
+}
+.cuxiao-t a {
+    float: right;
+    line-height: 24px;
+    font-family: "arial";
+    color: #999;
+    font-size: 12px;
+}
+/* 字数超出范围以...的形式显示 */
+.cuxiao-b li {
+    line-height: 22px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.cuxiao-b li a {
+    color: #666;
+}
+.cuxiao-b li:hover a{
+    color: #f10215;
+}
+/* 服务拓展模块 */
+.expend {
+    height:190px;
+    width: 190px;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 18px 11px 11px;
+}
+.expend ul li {
+    float: left;
+    width: 42px;
+    height: 55px;
+    text-align:center;
+
+}
+.expend ul a {
+    display: block;
+    padding-top: 6px;
+    text-align:center;
+
+
+}
+.expend ul i {
+    font-family: "icomoon";
+    font-style: normal;
+    font-size: 20px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 4px auto;
+    color: #d1c5ae;
+}
+.expend ul a span {
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    border-bottom: 2px solid #fff;
+    color: #bea68d;
+
+}
+.expend ul a:hover i {
+    color: #f10215;
+}
+.expend ul a:hover span {
+    color: #f10215;
+}
+

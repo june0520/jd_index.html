@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>旋转轮播图</title>
+    <style>
+/*----------------------------------------------- 旋转轮播图 --------------------------------------------------------*/
+html {
+    height: 2000px;
+}
+        body {
+            perspective: 1000px;
+        }
+        section {
+            width: 150px;
+            height: 150px;
+            background: url(images/nologin.jpg) no-repeat;
+            background-size: cover;
+            position: relative;
+            margin: 200px auto;
+            transform-style: preserve-3d;
+            transition: all 3s;
+        }
+        section:hover{
+            transform: rotateY(360deg);
+        }
+        section div {
+            width: 100%;
+            height: 100%;
+            background: url(images/loge_03.png) no-repeat;
+            position: absolute; 
+            top: 0;
+            left: 0;
+        }
+        section div:nth-child(1) {
+            transform: rotateY(0deg) translateZ(400px);
+        }
+        section div:nth-child(2) {
+            transform: rotateY(60deg) translateZ(400px);
+        }
+        section div:nth-child(3) {
+            transform: rotateY(120deg) translateZ(400px);
+        }
+        section div:nth-child(4) {
+            transform: rotateY(180deg) translateZ(400px);
+        }  
+        section div:nth-child(5) {
+            transform: rotateY(240deg) translateZ(400px);
+        }  
+        section div:nth-child(6) {
+            transform: rotateY(300deg) translateZ(400px);
+        }
+        /* --------------------------------------翻页-------------------------------------- */
+         .con1 {
+            width: 100px;
+            height: 100px;
+            margin:250px auto 0;
+            position: relative;
+            transform-style: preserve-3d;
+        
+        }
+        .pic1, .txt1 {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .txt1 {
+            background: rgba(0, 0, 0, .5);
+            text-align: center;
+            line-height: 24px;
+            font-size: 16px;
+        }
+        .pic1 {
+            z-index: 2;
+            transition: all 0.5s;
+            backface-visibility: hidden;
+
+        }
+        .con1:hover .pic1 {
+            transform: rotateY(180deg);
+        } 
+ 
+        /*---------------------------------------- 翻页改良版 ------------------------------------*/
+
+    .con {
+        width: 100px;
+        height: 100px;
+        margin: 0px auto;
+        position: relative;
+        transform-style: preserve-3d;
+
+    }
+    .pic, .txt {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        transition: all 1s;
+    }
+    .pic {
+        transform: rotateY(0deg);
+    }
+    .txt {
+        background: pink;
+        font-size: 16px;
+        text-align: center;
+        transform: rotateY(180deg);
+    }
+    .con:hover .pic{
+        transform: rotateY(180deg);
+    }
+    .con:hover .txt{
+        transform: rotateY(0deg);
+    }
+/* --------------------------------------------loading加载动画 ----------------------------------------------*/
+    .box {  
+        width: 300px;
+        height: 130px;
+        border: 1px solid #000;
+    }
+    .box div {
+        width: 30px;
+        height: 70px;
+        float:left;
+        /* alternates设置动画按原路返回 */
+        animation: loading 1s ease infinite alternate;
+        margin: 15px;
+        border-radius: 20px;
+    }
+    .box p {
+        text-align: center;
+        height: 20px;
+        width: 300px;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+    .box div:nth-child(1) {
+        background-color: pink;
+    }
+    .box div:nth-child(2) {
+        background-color: skyblue;
+        animation-delay: 0.1s;
+
+    }
+    .box div:nth-child(3) {
+        background-color: yellowgreen;
+        animation-delay: 0.3s;
+
+    }
+    .box div:nth-child(4) {
+        background-color: cyan;
+        animation-delay: 0.5s;
+
+    }
+    .box div:nth-child(5) {
+        background-color: peru;
+        animation-delay: 0.7s;
+
+    }
+    @keyframes loading {
+        from {
+            transform: scaleY(1);
+        }
+        to {
+            transform: scaleY(0.3);
+        }
+
+    }
+/* ------------------------------------分割线--------------------------------------- */
+    .boxout {
+        width: 200PX;
+        height: 50px;
+        background-color: pink;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    .boxin {
+        width: 400px;
+        white-space: nowrap;
+        animation: moving  3s linear 10 alternate;
+    }
+    @keyframes moving {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-200px);
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <!---------------------------------------- 旋转轮播图分割线 -------------------------------->
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+    </section>
+    <!-- ----------------------------------------翻页效果 ---------------------------------------->
+    <div class="con1">
+        <div class="pic1"><img src="images/nologin.jpg" alt="未登录"></div>
+        <div class="txt1">未登录嘿</div>
+    </div>
+    <div class="con">
+        <div class="pic"><img src="images/nologin.jpg" alt=""></div>
+        <div class="txt">未登录呢还</div>
+    </div>
+    <!-- --------------------------loading加载动画 ------------------------------------------------------>
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <p>loading...</p> 
+    </div>
+<!-- -------------------------------------我是滚动条的分割线------------------------------------- -->
+    <div class="boxout">
+        <div class="boxin">
+            我是滚动条我是滚动条我是滚动条我是滚动条我是滚动条我是滚动条
+        </div>
+    </div>
+
+
+
+
+
+
+
+    
+</body>
+</html>
